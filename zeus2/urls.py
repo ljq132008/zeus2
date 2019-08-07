@@ -20,12 +20,12 @@ from .swagger import get_swagger_view
 
 api_v1 = [
    path('users/v1/', include('users.urls.api_urls', namespace='api-users')),
-   # path('assets/v1/', include('assets.urls.api_urls', namespace='api-assets')),
+   path('assets/v1/', include('assets.urls.api_urls', namespace='api-assets')),
    # path('perms/v1/', include('perms.urls.api_urls', namespace='api-perms')),
    # path('terminal/v1/', include('terminal.urls.api_urls', namespace='api-terminal')),
-   # path('ops/v1/', include('ops.urls.api_urls', namespace='api-ops')),
+   path('ops/v1/', include('ops.urls.api_urls', namespace='api-ops')),
    # path('audits/v1/', include('audits.urls.api_urls', namespace='api-audits')),
-   # path('orgs/v1/', include('orgs.urls.api_urls', namespace='api-orgs')),
+   path('orgs/v1/', include('orgs.urls.api_urls', namespace='api-orgs')),
    # path('settings/v1/', include('settings.urls.api_urls', namespace='api-settings')),
    path('authentication/v1/', include('authentication.urls.api_urls', namespace='api-auth')),
 ]

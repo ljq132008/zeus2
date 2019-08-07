@@ -33,7 +33,7 @@ SECRET_KEY = 'p3#l$!#osj44_b%bk^_+-c=2fw#icf(aicdw(a*ok!cjkund5!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 SWAGGER_SETTINGS = {
     'DEFAULT_AUTO_SCHEMA_CLASS': 'zeus2.swagger.CustomSwaggerAutoSchema',
@@ -136,6 +136,7 @@ INSTALLED_APPS = [
     'ops',
     'orgs',
     'users',
+    'perms',
     'rest_framework',
     'rest_framework_swagger',
     'drf_yasg',
