@@ -8,7 +8,7 @@ from django.conf import LazySettings, empty, global_settings
 from django.db.utils import ProgrammingError, OperationalError
 from django.core.cache import cache
 
-from jumpserver.utils import current_request
+from zeus2.utils import current_request
 from common.utils import get_logger, ssh_key_gen
 from common.signals import django_ready
 from .models import Setting

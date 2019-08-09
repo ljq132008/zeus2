@@ -43,7 +43,7 @@ class IsOrgAdmin(IsValidUser):
 
     def has_permission(self, request, view):
         return super(IsOrgAdmin, self).has_permission(request, view) \
-            and current_org.can_admin_by(request.user)
+           and current_org.can_admin_by(request.user)
 
 
 class IsOrgAdminOrAppUser(IsValidUser):

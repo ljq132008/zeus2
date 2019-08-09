@@ -140,6 +140,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_swagger',
     'drf_yasg',
+    'settings',
 ]
 
 MIDDLEWARE = [
@@ -224,6 +225,8 @@ SECURITY_PASSWORD_RULES = [
     'SECURITY_PASSWORD_NUMBER',
     'SECURITY_PASSWORD_SPECIAL_CHAR'
 ]
+
+ASSETS_PERM_CACHE_TIME = CONFIG.ASSETS_PERM_CACHE_TIME
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

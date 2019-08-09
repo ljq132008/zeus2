@@ -18,7 +18,7 @@ from django.db.models import Q
 
 from common.mixins import IDInFilterMixin
 from common.utils import get_logger
-from common.permissions import IsOrgAdmin, IsOrgAdminOrAppUser
+from common.permissions import IsOrgAdmin, IsOrgAdminOrAppUser, IsSuperUserOrAppUser
 from ..const import CACHE_KEY_ASSET_BULK_UPDATE_ID_PREFIX
 from ..models import Asset, AdminUser, Node
 from .. import serializers
@@ -45,7 +45,8 @@ class AssetViewSet(IDInFilterMixin, LabelFilter, BulkModelViewSet):
     queryset = Asset.objects.all()
     serializer_class = serializers.AssetSerializer
     pagination_class = LimitOffsetPagination
-    permission_classes = (IsOrgAdminOrAppUser,)
+    # permission_classes = (IsOrgAdminOrAppUser,)
+    permission_classes = (IsSuperUserOrAppUser,)
 
     def filter_node(self, queryset):
         node_id = self.request.query_params.get("node_id")

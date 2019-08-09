@@ -18,7 +18,7 @@ from rest_framework.pagination import LimitOffsetPagination
 from django.db.models import Count
 
 from common.utils import get_logger
-from ..hands import IsOrgAdmin
+from ..hands import IsOrgAdmin, IsSuperUserOrAppUser
 from ..models import Label
 from .. import serializers
 
@@ -30,7 +30,8 @@ __all__ = ['LabelViewSet']
 class LabelViewSet(BulkModelViewSet):
     filter_fields = ("name", "value")
     search_fields = filter_fields
-    permission_classes = (IsOrgAdmin,)
+    # permission_classes = (IsOrgAdmin,)
+    permission_classes = (IsSuperUserOrAppUser,)
     serializer_class = serializers.LabelSerializer
     pagination_class = LimitOffsetPagination
 
