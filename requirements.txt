@@ -9,7 +9,7 @@ cffi==1.12.3
 chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
-cryptography==2.7
+cryptography==3.2
 Django==2.1.7
 django-auth-ldap==1.7.0
 django-celery-beat==1.4.0
